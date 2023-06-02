@@ -165,7 +165,7 @@ resource "aws_iam_role" "petclinic-master-server-s3-role" {
 }
 EOF
 
-  managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonS3FullAccess"]
+  managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"]
 }
 
 resource "aws_iam_instance_profile" "petclinic-master-server-profile" {
