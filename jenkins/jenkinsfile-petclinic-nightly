@@ -98,7 +98,6 @@ pipeline {
             steps {
                 echo "Setup Kubernetes cluster for ${APP_NAME} App"
                 sh "ansible-playbook -i ./ansible/inventory/dev_stack_dynamic_inventory_aws_ec2.yaml ./ansible/playbooks/k8s_setup.yaml"
-                sh "sleep 6000"
             }
         }
 
