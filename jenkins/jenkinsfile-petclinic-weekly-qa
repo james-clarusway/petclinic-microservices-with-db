@@ -18,10 +18,7 @@ pipeline {
         stage('Prepare Tags for Docker Images') {
             steps {
                 echo 'Preparing Tags for Docker Images'
-                steps { 
-                    echo 'prepare'
-                    sh "ls" 
-                             }
+                    sh "ls"
             }
         }
         // stage('test') {
