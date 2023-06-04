@@ -40,25 +40,32 @@ pipeline {
                 }
             }
         }
-        stage('Build App Docker Images') {
-            steps {
-                echo 'Building App Dev Images'
-                sh ". ./jenkins/build-qa-docker-images-for-ecr.sh"
-                sh 'docker image ls'
+        stage('test') {
+            steps  {
+                echo $IMAGE_TAG_VETS_SERVICE
+                sh "echo $IMAGE_TAG_VETS_SERVICE"
             }
         }
-        stage('Push Images to ECR Repo') {
-            steps {
-                echo "Pushing ${APP_NAME} App Images to ECR Repo"
-                sh ". ./jenkins/push-qa-docker-images-to-ecr.sh"
-            }
-        }
-        stage('Deploy App on Kubernetes Cluster'){
-            steps {
-                echo 'Deploying App on Kubernetes Cluster'
-                sh '. ./jenkins/deploy_app_on_qa_environment.sh'
-            }
-        }
+
+        // stage('Build App Docker Images') {
+        //     steps {
+        //         echo 'Building App Dev Images'
+        //         sh ". ./jenkins/build-qa-docker-images-for-ecr.sh"
+        //         sh 'docker image ls'
+        //     }
+        // }
+        // stage('Push Images to ECR Repo') {
+        //     steps {
+        //         echo "Pushing ${APP_NAME} App Images to ECR Repo"
+        //         sh ". ./jenkins/push-qa-docker-images-to-ecr.sh"
+        //     }
+        // }
+        // stage('Deploy App on Kubernetes Cluster'){
+        //     steps {
+        //         echo 'Deploying App on Kubernetes Cluster'
+        //         sh '. ./jenkins/deploy_app_on_qa_environment.sh'
+        //     }
+        // }
     }
     post {
         always {
