@@ -42,7 +42,7 @@ pipeline {
         }
         stage('test') {
             steps  {
-                echo IMAGE_TAG_VETS_SERVICE
+                // echo IMAGE_TAG_VETS_SERVICE
                 sh "echo $IMAGE_TAG_VETS_SERVICE"
             }
         }
