@@ -51,7 +51,7 @@ pipeline {
         //         sh '. ./jenkins/deploy_app_on_qa_environment.sh'
         //     }
         // }
-   // }
+    }
     // post {
     //     always {
     //         echo 'Deleting all local images'
