@@ -20,7 +20,7 @@ pipeline {
                 echo 'Preparing Tags for Docker Images'
                 steps { 
                     echo 'prepare'
-                    // sh "echo hi" 
+                    sh "ls" 
                              }
             }
         }
