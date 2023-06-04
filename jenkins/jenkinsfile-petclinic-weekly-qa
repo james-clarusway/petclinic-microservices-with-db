@@ -24,13 +24,13 @@ pipeline {
                              }
             }
         }
-        stage('test') {
-            steps  {
-                echo 'test'
-                // echo IMAGE_TAG_VETS_SERVICE
-                // sh "echo hello"
-            }
-        }
+        // stage('test') {
+        //     steps  {
+        //         echo 'test'
+        //         // echo IMAGE_TAG_VETS_SERVICE
+        //         // sh "echo hello"
+        //     }
+        // }
 
         // stage('Build App Docker Images') {
         //     steps {
