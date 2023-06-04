@@ -24,7 +24,7 @@ pipeline {
         stage('test') {
             steps  {
                 echo 'test'
-                echo '$IMAGE_TAG_VETS_SERVICE'
+                echo "$IMAGE_TAG_VETS_SERVICE"
                 sh "echo IMAGE_TAG_CUSTOMERS_SERVICE"
             }
         }
