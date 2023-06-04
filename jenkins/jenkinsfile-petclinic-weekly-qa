@@ -20,7 +20,7 @@ pipeline {
                 echo 'Preparing Tags for Docker Images'
                 steps { 
                     sh "echo hi" 
-                    #"./jenkins/tag.sh"
+                    // "./jenkins/tag.sh"
                              }
             }
         }
