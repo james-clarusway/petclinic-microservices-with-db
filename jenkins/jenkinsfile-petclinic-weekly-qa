@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo 'Preparing Tags for Docker Images'
                 steps { 
+                    echo 'prepare'
                     sh "echo hi" 
                     // "./jenkins/tag.sh"
                              }
@@ -26,6 +27,7 @@ pipeline {
         }
         stage('test') {
             steps  {
+                echo 'test'
                 // echo IMAGE_TAG_VETS_SERVICE
                 sh "echo hello"
             }
