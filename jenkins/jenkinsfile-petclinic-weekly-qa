@@ -25,7 +25,7 @@ pipeline {
             steps  {
                 echo 'test'
                 // echo IMAGE_TAG_VETS_SERVICE
-                sh "ls"
+                sh "echo abc"
             }
         }
 
