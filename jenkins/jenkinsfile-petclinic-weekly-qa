@@ -21,13 +21,13 @@ pipeline {
                     sh "ls"
             }
         }
-        // stage('test') {
-        //     steps  {
-        //         echo 'test'
-        //         // echo IMAGE_TAG_VETS_SERVICE
-        //         // sh "echo hello"
-        //     }
-        // }
+        stage('test') {
+            steps  {
+                echo 'test'
+                // echo IMAGE_TAG_VETS_SERVICE
+                // sh "echo $IMAGE_TAG_VETS_SERVICE"
+            }
+        }
 
         // stage('Build App Docker Images') {
         //     steps {
