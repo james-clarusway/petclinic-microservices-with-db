@@ -12,19 +12,16 @@ pipeline {
         stage('Prepare Tags for Docker Images') {
             steps {
                     sh "myvar=myval"
-                    sh """
-                    ./jenkins/tag.sh
-                    . ./jenkins/tag.sh
-                    """
+                    sh "./jenkins/tag.sh"
+                    sh ". ./jenkins/tag.sh"
             }
         }
-        // stage('test') {
-        //     steps  {
-        //         echo 'test'
-        //         echo '$IMAGE_TAG_VETS_SERVICE'
-        //         sh "echo IMAGE_TAG_CUSTOMERS_SERVICE"
-        //     }
-        // }
+        stage('test') {
+            steps  {
+                    sh "./jenkins/tag.sh"
+                    sh ". ./jenkins/tag.sh"
+            }
+        }
 
         // stage('Build App Docker Images') {
         //     steps {
