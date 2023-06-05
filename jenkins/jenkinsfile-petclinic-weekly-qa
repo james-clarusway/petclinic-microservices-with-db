@@ -1,33 +1,27 @@
 pipeline {
     agent any
-    // environment {
+    environment {
     //     // PATH=sh(script:"echo $PATH:/usr/local/bin:$HOME/bin", returnStdout:true).trim()
-    //     APP_NAME="petclinic"
+         APP_NAME="petclinic"
     //     // APP_REPO_NAME="clarusway-repo/petclinic-app-qa"
     //     // AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
     //     // AWS_REGION="us-east-1"
     //     // ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
-    // }
+    }
      stages {
-    //     stage('Package Application') {
-    //         steps {
-    //             echo 'Packaging the app into jars with maven'
-    //             sh ". ./jenkins/package-with-maven-container.sh"
-    //         }
-    //     }
         stage('Prepare Tags for Docker Images') {
             steps {
-                echo 'Preparing Tags for Docker Images'
-                    sh ". ./jenkins/tag.sh"
+                echo '$APP_NAME'
+                    sh "echo $APP_NAME"
             }
         }
-        stage('test') {
-            steps  {
-                echo 'test'
-                echo '$IMAGE_TAG_VETS_SERVICE'
-                sh "echo IMAGE_TAG_CUSTOMERS_SERVICE"
-            }
-        }
+        // stage('test') {
+        //     steps  {
+        //         echo 'test'
+        //         echo '$IMAGE_TAG_VETS_SERVICE'
+        //         sh "echo IMAGE_TAG_CUSTOMERS_SERVICE"
+        //     }
+        // }
 
         // stage('Build App Docker Images') {
         //     steps {
