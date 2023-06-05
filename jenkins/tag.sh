@@ -1,1 +1,1 @@
-echo $SHLVL
+$SHLVL
