@@ -11,12 +11,8 @@ pipeline {
      stages {
         stage('Prepare Tags for Docker Images') {
             steps {
-                echo 'APP_NAME'
                     sh "myvar=myval"
-                    sh "echo $SHLVL"
-                    sh "./jenkins/tag.sh"
                     sh """
-                    myvar=myval
                     ./jenkins/tag.sh
                     . ./jenkins/tag.sh
                     """

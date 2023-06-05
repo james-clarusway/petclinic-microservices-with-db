@@ -1,3 +1,2 @@
-echo $SHLVL
+echo $APP_NAME
 echo $myvar
-./jenkins/tag.sh
