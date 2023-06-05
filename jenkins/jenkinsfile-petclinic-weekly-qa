@@ -11,7 +11,7 @@ pipeline {
      stages {
         stage('Prepare Tags for Docker Images') {
             steps {
-                    sh "myvar=myval"
+                    sh "export myvar=myval"
                     sh "./jenkins/tag.sh"
                     sh ". ./jenkins/tag.sh"
             }
