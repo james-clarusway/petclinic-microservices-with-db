@@ -14,8 +14,8 @@ pipeline {
                 echo 'APP_NAME'
                     sh "echo $APP_NAME"
                     sh "echo $SHLVL"
-                    sh "./tag.sh"
-                    sh "./tag.sh"
+                    sh "./jenkins/tag.sh"
+                    sh ". ./jenkins/tag.sh"
             }
         }
         // stage('test') {
