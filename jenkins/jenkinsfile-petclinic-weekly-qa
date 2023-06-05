@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo 'APP_NAME'
                     sh "echo $APP_NAME"
+                    sh "echo $SHLVL"
             }
         }
         // stage('test') {
