@@ -14,7 +14,7 @@ spec:
     - name: "9411"
       port: 9411
       targetPort: 9411
-      nodePort:30033
+      nodePort: 30033
   selector:
     io.kompose.service: tracing-server
 status:
