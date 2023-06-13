@@ -10,7 +10,7 @@ metadata:
     io.kompose.service: customers-service
   name: customers-service
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       io.kompose.service: customers-service
